@@ -6,7 +6,14 @@ int keyVal;
 struct BTnode *leftNode;
 struct BTnode *rightNode;
 };
-
+struct BTnode *getNode(int value)
+{
+struct BTnode *newNode = malloc(sizeof(struct BTnode));
+newNode->keyVal = value;
+newNode->leftNode = NULL;
+newNode->rightNode = NULL;
+return newNode;
+}
 struct BTnode *insert(struct BTnode *rootNode, int value)
 {
 if(rootNode == NULL)
